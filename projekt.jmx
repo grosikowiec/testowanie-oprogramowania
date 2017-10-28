@@ -29,13 +29,13 @@
         <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Konfiguracja plików CSV" enabled="true">
           <stringProp name="delimiter">,</stringProp>
           <stringProp name="fileEncoding"></stringProp>
-          <stringProp name="filename"></stringProp>
+          <stringProp name="filename">C:\Users\Grosik\Desktop\STUDIA\5 semestr\Testowanie oprogramowania\projrkt\hasla.csv</stringProp>
           <boolProp name="ignoreFirstLine">false</boolProp>
           <boolProp name="quotedData">false</boolProp>
           <boolProp name="recycle">true</boolProp>
           <stringProp name="shareMode">shareMode.thread</stringProp>
           <boolProp name="stopThread">false</boolProp>
-          <stringProp name="variableNames">login,password,keys</stringProp>
+          <stringProp name="variableNames">login,password</stringProp>
         </CSVDataSet>
         <hashTree/>
         <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager" enabled="true">
@@ -54,15 +54,15 @@
         <hashTree/>
         <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller" enabled="true"/>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="1_portletlogin.xhtml_NoAction" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="1_filmweblogin.xhtml_NoAction" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="Zmienne zdefiniowane przez użytkownika" enabled="true">
               <collectionProp name="Arguments.arguments"/>
             </elementProp>
-            <stringProp name="HTTPSampler.domain">signin.ea.com</stringProp>
+            <stringProp name="HTTPSampler.domain">filmweb.pl</stringProp>
             <stringProp name="HTTPSampler.port"></stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
             <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">/p/web2/login?execution=e686869868s1&amp;initref=https%3A%2F%2Faccounts.ea.com%3A443%2Fconnect%2Fauth%3Flocale%3Dpl_PL%26state%3Dbf3%26redirect_uri%3Dhttps%253A%252F%252Fbattlelog.battlefield.com%252Fsso%252F%253Ftokentype%253Dcode%26response_type%3Dcode%26client_id%3Dbattlelog%26display%3Dweb%252Flogin</stringProp>
+            <stringProp name="HTTPSampler.path">/login</stringProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -121,7 +121,7 @@
             <boolProp name="IfController.evaluateAll">false</boolProp>
           </IfController>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="2_portletlogin.xhtml_Login" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="2_filmweblogin.xhtml_Login" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="Zmienne zdefiniowane przez użytkownika" enabled="true">
               <collectionProp name="Arguments.arguments">
                 <elementProp name="FORM_ID" elementType="HTTPArgument">
@@ -164,11 +164,11 @@
                 </elementProp>
               </collectionProp>
             </elementProp>
-            <stringProp name="HTTPSampler.domain">https://signin.ea.com</stringProp>
+            <stringProp name="HTTPSampler.domain">filmweb.pl</stringProp>
             <stringProp name="HTTPSampler.port"></stringProp>
-            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
             <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
-            <stringProp name="HTTPSampler.path">/p/web2/login?execution=e686869868s1&amp;initref=https%3A%2F%2Faccounts.ea.com%3A443%2Fconnect%2Fauth%3Flocale%3Dpl_PL%26state%3Dbf3%26redirect_uri%3Dhttps%253A%252F%252Fbattlelog.battlefield.com%252Fsso%252F%253Ftokentype%253Dcode%26response_type%3Dcode%26client_id%3Dbattlelog%26display%3Dweb%252Flogin</stringProp>
+            <stringProp name="HTTPSampler.path">/login</stringProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -182,12 +182,12 @@
             <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
               <collectionProp name="HeaderManager.headers">
                 <elementProp name="" elementType="Header">
-                  <stringProp name="Header.name">Refer</stringProp>
-                  <stringProp name="Header.value"></stringProp>
+                  <stringProp name="Header.name">Defer</stringProp>
+                  <stringProp name="Header.value">defer</stringProp>
                 </elementProp>
                 <elementProp name="" elementType="Header">
-                  <stringProp name="Header.name">Accept-Language</stringProp>
-                  <stringProp name="Header.value"></stringProp>
+                  <stringProp name="Header.name">Content-Language</stringProp>
+                  <stringProp name="Header.value">pl</stringProp>
                 </elementProp>
                 <elementProp name="" elementType="Header">
                   <stringProp name="Header.name">Origin</stringProp>
@@ -203,7 +203,7 @@
                 </elementProp>
                 <elementProp name="" elementType="Header">
                   <stringProp name="Header.name">Content-Type</stringProp>
-                  <stringProp name="Header.value"></stringProp>
+                  <stringProp name="Header.value">text/html</stringProp>
                 </elementProp>
                 <elementProp name="" elementType="Header">
                   <stringProp name="Header.name">Chache-Control</stringProp>
