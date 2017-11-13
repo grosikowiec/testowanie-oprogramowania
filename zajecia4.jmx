@@ -31,7 +31,7 @@
           <stringProp name="checkQuery">select 1</stringProp>
           <stringProp name="connectionAge">5000</stringProp>
           <stringProp name="dataSource">TEST</stringProp>
-          <stringProp name="dbUrl">jdbc:mysql://testowanie.local:3306/tester2</stringProp>
+          <stringProp name="dbUrl">jdbc:mysql://localhost:3306/testowaniedb</stringProp>
           <stringProp name="driver">com.mysql.jdbc.Driver</stringProp>
           <boolProp name="keepAlive">true</boolProp>
           <stringProp name="password">testowanie</stringProp>
@@ -39,12 +39,14 @@
           <stringProp name="timeout">10000</stringProp>
           <stringProp name="transactionIsolation">DEFAULT</stringProp>
           <stringProp name="trimInterval">60000</stringProp>
-          <stringProp name="username">tester2</stringProp>
+          <stringProp name="username">root</stringProp>
         </JDBCDataSource>
         <hashTree/>
         <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="JDBC Request Insert osoby table" enabled="true">
           <stringProp name="dataSource">TEST</stringProp>
-          <stringProp name="query">insert into osoby values(1,grr,arg)</stringProp>
+          <stringProp name="query">update osoby 
+set id=2
+where id=1</stringProp>
           <stringProp name="queryArguments"></stringProp>
           <stringProp name="queryArgumentsTypes"></stringProp>
           <stringProp name="queryTimeout"></stringProp>
@@ -69,7 +71,8 @@
         <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="JDBC Request Delete osobt table" enabled="true">
           <stringProp name="dataSource">TEST</stringProp>
           <stringProp name="queryType">Update Statement</stringProp>
-          <stringProp name="query">drop </stringProp>
+          <stringProp name="query">DELETE FROM osoby
+WHERE id=1;</stringProp>
           <stringProp name="queryArguments"></stringProp>
           <stringProp name="queryArgumentsTypes"></stringProp>
           <stringProp name="variableNames"></stringProp>
