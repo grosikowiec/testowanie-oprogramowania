@@ -1,0 +1,2 @@
+http://www.seleniumeasy.com/test/basic-first-form-demo.html
+java -Dwebdriver.chrome.driver=C:\chromedriver.exe -jar selenium-server-standalone-2.52.0.jar -port 4440
